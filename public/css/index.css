@@ -1,0 +1,35 @@
+
+section>div:nth-child(2){
+  position: absolute;
+  bottom:10%;
+  right:5%;
+} 
+
+.container ul:first-child>li:hover img{
+  transform:rotateY(360deg);
+
+}
+.container ul:first-child>li img{
+  transition:all .5s linear;
+}
+
+/* .row{
+  border-bottom-style:dotted !important;
+} */
+div[id^=content] img{
+  transition:all 1s ;
+}
+div[id^=content] img:hover{
+  transform: scale(1.1);
+}
+div.card:hover{
+  box-shadow: #ddd 2px 2px
+}
+.card-body h6 img{
+  margin-top:-10%;
+}
+
+div>h6:first-child{
+  font-weight:bold;
+}
+

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="img/wen-ico.png" type="img/x-ico" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>背包兔-做行程更简单 800多万网友原创旅游行程</title>
+    <style>
+    </style>
+  </head>
+  <body class="">
+     <!-- 顶部导航栏 -->
+    <header class="bg-primary">
+      <div class="container navbar navbar-expand-lg navbar-dark  p-0 d-flex">
+        <!-- logo图 -->
+        <a href="index.html" class="p-0"><img src="img/logo.png" alt="" class="img-fluid"></a>
+        <!-- 折叠按钮 -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#content">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 导航详情部分 -->
+        <div class="collapse navbar-collapse justify-content-between " id="content">
+          <!-- 导航按钮 -->
+          <ul class="navbar-nav justify-content-between">
+            <li class="nav-item text-center">
+              <a href="index.html" class="nav-link">首页</a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link">行程</a>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link">目的地</a>
+            </li>
+            <!-- 带下拉菜单项目 -->
+            <li class="nav-item text-center dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">酒店</a>
+              <ul class="dropdown-menu bg-primary">
+                <li class="dropdown-item"><a class="text-white" href="hotel.html">酒店预定</a></li>
+                <li class="dropdown-item"><a class="text-white" href="#">酒店攻略</a></li>
+              </ul>
+            </li>
+            <li class="nav-item text-center dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">特价</a>
+              <ul class="dropdown-menu  bg-primary">
+                <li class="dropdown-item"><a class="text-white" href="#">特价酒店</a></li>
+                <li class="dropdown-item"><a class="text-white" href="#">特价线路</a></li>
+                <li class="dropdown-item"><a class="text-white" href="#">保险</a></li>
+              </ul>
+            </li>
+            <li class="nav-item text-center">
+              <a href="#" class="nav-link">帮助</a>
+            </li>
+          </ul>
+          <!-- 搜索框 -->
+          <div class="d-flex align-content-center text-center justify-content-center">
+            <div class="d-flex align-items-center ">
+              <input type="text" placeholder="搜索行程、目的地">
+              <a href="#"><img src="img/search-black.png" alt=""></a>
+            </div>
+          </div>
+          <!-- 创建行程及注册登录 -->
+          <div class="d-flex flex-nowrap text-white align-items-center justify-content-center p-2">
+            <div class="bg-warning mr-lg-5 mr-2 p-1">+创建行程</div>
+            
+            <div><a href="#login" class="text-white" data-toggle="modal">登录</a>|<a href="reg.html" class="text-white">注册</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- 返回顶部 -->
+    <div class="bg-success d-flex align-items-center justify-content-center">
+      <a href="#"><img src="img/go_to_top.png" alt=""></a>
+    </div>
+    <!-- 登录模态 -->
+    <div class="modal p-0" id="login">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              登录
+              <button data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>用户名称<input type="text" name="uname" id="uname" class="form-control"></p>
+              <p>用户密码<input type="password" name="upwd" id="upwd" class="form-control"></p>
+              <p><input type="button" value="登录" class="btn btn-primary mr-3"><input type="button" value="取消" class="btn btn-primary" data-dismiss="modal"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- 轮播图 -->
+    <section>
+      <div class="container-fluid p-0">
+        <div class="carousel" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/bg_top.png" alt="" class="w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="img/bg_top2.png" alt="" class="w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  class="text-right d-lg-block d-none">
+        <p><img src="img/icon-T.png" alt=""></p>
+        <button class="btn btn-warning mb-3 text-white">创建我的行程</button>
+        <div class="text-white h5">
+          <p>背包兔旅行网是为喜欢旅行的朋友提供的行程之所和旅行分享的平台。</p>
+          <p>你可以参考地图合理地规划路线，安排每一天的景点、交通和住宿，估算好时间和费用，还可以将行程分享给好友。</p>
+        </div>
+      </div>
+
+    </section>
+    <!-- 内容部分 -->
+    <div class="container p-0 mt-3">
+      <!-- 圆形导航图标 -->
+      <ul class="list-unstyled d-flex justify-content-around">
+        <li class="text-center"><a href="#content1">
+          <img class="img-fluid" src="img/icon-1.png" alt="">
+          <p class="mySmallFont mt-2">行程一目了然</p>
+        </a></li>
+        <li class="text-center"><a href="#content2">
+          <img class="img-fluid" src="img/icon-2.png" alt="">
+          <p class="mySmallFont mt-2">超大地图模式</p>
+        </a></li>
+        <li class="text-center"><a href="#content3">
+          <img class="img-fluid" src="img/icon-3.png" alt="">
+          <p class="mySmallFont mt-2">景点酒店推荐</p>
+        </a></li>
+        <li class="text-center"><a href="#content4">
+          <img class="img-fluid" src="img/icon-4.png" alt="">
+          <p class="mySmallFont mt-2">行李轻松安排</p>
+        </a></li>
+        <li class="text-center"><a href="#content5">
+          <img class="img-fluid" src="img/icon-5.png" alt="">
+          <p class="mySmallFont mt-2">预算合理安排</p>
+        </a></li>
+        <li class="text-center"><a href="#content6">
+          <img class="img-fluid" src="img/icon-6.png" alt="">
+          <p class="mySmallFont mt-2">送签单易导出</p>
+        </a></li>
+        <li class="text-center"><a href="#content7">
+          <img class="img-fluid" src="img/icon-7.png" alt="">
+          <p class="mySmallFont mt-2">支持手机同步</p>
+        </a></li>
+      </ul>
+      <!-- 图片及说明 -->
+      <div id="content1" class="row border-bottom p-4">
+        <div class="col-md-6 col-12">
+          <img class="img-fluid" src="img/plan.png" alt="">
+        </div>
+        <div class="col-md-6 col-12 d-flex flex-wrap align-items-center">
+            <h2 class="text-info">行程一目了然</h2>
+            <div class="h5">
+              清晰的日常模式，规划好每一天的酒店、交通和住宿，提前做好备注，安排行程和费用，让你的旅游行程一目了然。
+            </div>
+            <a class="btn btn-lg btn-warning" href="#" title="创建行程">创建行程</a>
+        </div>
+      </div>
+      <div id="content2" class="row border-bottom p-4">
+        <div class="col-md-6 col-12 d-flex flex-wrap align-items-center justify-content-end">
+            <h2 class="text-primary">超大地图模式</h2>
+            <div class="h5 text-right">
+              Bigger than bigger的地图，让视野更加无拘无束，做起旅游计划来得心应手。
+            </div>
+            <a class="btn btn-lg btn-warning" href="#" title="创建行程">创建行程</a>
+        </div>
+        <div class="col-md-6 col-12">
+          <img class="img-fluid" src="img/map.png" alt="">
+        </div>
+      </div>
+      <div id="content3" class="row border-bottom p-4">
+        <div class="col-md-6 col-12">
+          <img class="img-fluid" src="img/item.png" alt="">
+        </div>
+        <div class="col-md-6 col-12 d-flex flex-wrap align-content-center">
+            <h2 class="text-danger mb-5">景点酒店推荐</h2>
+            <div class="h5">
+              背包兔能自动获取附近推荐的酒店和景点，并轻松搜索和标注旅游目的地，合理规划自助游线路。
+            </div>
+            <div class="h5">全球900,000家优质酒店任你选择，特价天天有</div>
+            <div></div>
+        </div>
+      </div>
+      <div id="content4" class="row border-bottom p-4">
+        <div class="col-md-6 col-12 d-flex flex-wrap align-items-center justify-content-end">
+            <h2 class="text-info">行李轻松安排</h2>
+            <div class="h5 text-right">
+              完备的行李清单，让你从此不再为行李考虑步骤而遗憾，更不会为丢三落四而烦恼，轻松出游。
+            </div>
+            <a class="btn btn-lg btn-link" href="#" title="创建行程">购买保险</a>
+        </div>
+        <div class="col-md-6 col-12">
+          <img class="img-fluid" src="img/luggage.png" alt="">
+        </div>
+      </div>
+      <div id="content5" class="row border-bottom p-4">
+        <div class="col-md-6 col-12">
+          <img class="img-fluid" src="img/cost.png" alt="">
+        </div>
+        <div class="col-md-6 col-12 d-flex flex-wrap align-items-center">
+            <h2 class="text-warning">预算合理安排</h2>
+            <div class="h5">
+              出门玩，要玩的High，可不要让预算失控，影响你的旅行计划哦
+            </div>
+            <div>
+
+
+
+
+            </div>
+        </div>
+      </div>
+      <div id="content6" class="row border-bottom p-4">
+        <div class="col-md-6 col-12 d-flex flex-wrap align-items-center justify-content-end">
+            <h2 class="text-primary">送签单易导出</h2>
+            <div class="h5 text-right">
+              目的地自动翻译成多种当地语言，不再为自助行程规划的送签而烦恼，轻松搞定旅游签证。
+            </div>
+            <div>
+
+
+
+            </div>
+        </div>
+        <div class="col-md-6 col-12">
+          <img class="img-fluid" src="img/visa.png" alt="">
+        </div>
+      </div>
+      <div id="content7" class="row border-bottom-0 p-4">
+        <div class="col-md-6 col-12">
+            <img class="img-fluid" src="img/app.png" alt="">
+        </div>
+        <div class="col-md-6 col-12 d-flex flex-wrap align-items-center">
+            <h2 class="text-danger">支持手机同步</h2>
+            <div class="h5">
+                背包兔手机APP同步旅游行程，边走边看，带你领略世界风光。。
+            </div>
+            <div class="h5">
+                精选数十万<a href="#">旅游行程</a>攻略,倾情与你分享。
+            </div>
+        </div>
+      </div>
+      <!-- 网友制作行程部分 -->
+      <div>
+        <!-- 标题 -->
+        <div class="d-flex justify-content-between mt-3 border-bottom">
+          <h2>网友制作行程</h2>
+          <a href="#" class="btn btn-lg btn-link">更多旅游行程</a>
+        </div>
+        <!-- 内容 -->
+        <div class="row mt-3 ">
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <div class="card-head">
+                <img src="img/40_o.jpg" alt="" class="w-100">
+              </div>
+              <div class="card-body pt-0 pb-0">
+                <h6><img src="img/4.png" alt="" class="rounded-circle"><a href="">2018大阪4日遊</a></h6>
+                <p>台灣桃園國際機場 - 關西機場 - 関西空港駅・南海電気鉄道／空港線 - 飯店Ckeck in </p>
+               <p class="d-flex justify-content-between">
+                 <span><img src="img/sm_icon-1.png" alt="">18442</span>
+                 <span>
+                   <img src="img/sm_icon-2.png" alt="">
+
+                   <img src="img/sm_icon-3.png" alt=""class="mr-2 ml-2">
+                   
+                   <img src="img/sm_icon-4.png" alt="">
+                 </span>
+               </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <div class="card-head">
+                <img src="img/44_o.jpg" alt="" class="w-100">
+              </div>
+              <div class="card-body pt-0 pb-0">
+                <h6><img src="img/5.png" alt="" class="rounded-circle"><a href="">厦门三日游</a></h6>
+                <p>曾厝垵 - 环岛路 - 鼓浪屿 - 南普陀寺 - 厦门大学 - 中山路步行街 -</p>
+               <p class="d-flex justify-content-between">
+                 <span><img src="img/sm_icon-1.png" alt="">1442</span>
+                 <span>
+                   <img src="img/sm_icon-2.png" alt="">
+                   <img src="img/sm_icon-3.png" alt=""class="mr-2 ml-2">
+                   <img src="img/sm_icon-4.png" alt="">
+                 </span>
+               </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <div class="card-head">
+                <img src="img/43_o.jpg" alt="" class="w-100">
+              </div>
+              <div class="card-body pt-0 pb-0">
+                <h6><img src="img/64_avatar_small.jpg" alt="" class="rounded-circle"><a href="#">爱之旅——北京多元文化与艺术2日游</a></h6>
+                <p>鼓楼大街 - 大栅栏 - 烟袋斜街 - 后海 - 什刹海 -</p>
+               <p class="d-flex justify-content-between">
+                 <span><img src="img/sm_icon-1.png" alt="">1442</span>
+                 <span>
+                   <img src="img/sm_icon-2.png" alt="">
+                   <img src="img/sm_icon-3.png" alt=""class="mr-2 ml-2">
+                   <img src="img/sm_icon-4.png" alt="">
+                 </span>
+               </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <div class="card-head">
+                <img src="img/40_o.jpg" alt="" class="w-100">
+              </div>
+              <div class="card-body pt-0 pb-0">
+                <h6><img src="img/4.png" alt="" class="rounded-circle"><a href="">2018大阪4日遊</a></h6>
+                <p>台灣桃園國際機場 - 關西機場 - 関西空港駅・南海電気鉄道／空港線 - 飯店Ckeck in </p>
+               <p class="d-flex justify-content-between">
+                 <span><img src="img/sm_icon-1.png" alt="">18442</span>
+                 <span>
+                   <img src="img/sm_icon-2.png" alt="">
+                   <img src="img/sm_icon-3.png" alt=""class="mr-2 ml-2">
+                   <img src="img/sm_icon-4.png" alt="">
+                 </span>
+               </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <div class="card-head">
+                <img src="img/44_o.jpg" alt="" class="w-100">
+              </div>
+              <div class="card-body pt-0 pb-0">
+                <h6><img src="img/5.png" alt="" class="rounded-circle"><a href="">厦门三日游</a></h6>
+                <p>曾厝垵 - 环岛路 - 鼓浪屿 - 南普陀寺 - 厦门大学 - 中山路步行街 -</p>
+               <p class="d-flex justify-content-between">
+                 <span><img src="img/sm_icon-1.png" alt="">1442</span>
+                 <span>
+                   <img src="img/sm_icon-2.png" alt="">
+                   <img src="img/sm_icon-3.png" alt=""class="mr-2 ml-2">
+                   <img src="img/sm_icon-4.png" alt="">
+                 </span>
+               </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-3">
+            <div class="card">
+              <div class="card-head">
+                <img src="img/43_o.jpg" alt="" class="w-100">
+              </div>
+              <div class="card-body pt-0 pb-0">
+                <h6><img src="img/64_avatar_small.jpg" alt="" class="rounded-circle"><a href="#">爱之旅——北京多元文化与艺术2日游</a></h6>
+                <p>鼓楼大街 - 大栅栏 - 烟袋斜街 - 后海 - 什刹海 -</p>
+               <p class="d-flex justify-content-between">
+                 <span><img src="img/sm_icon-1.png" alt="">1442</span>
+                 <span>
+                   <img src="img/sm_icon-2.png" alt="">
+                   <img src="img/sm_icon-3.png" alt=""class="mr-2 ml-2">
+                   <img src="img/sm_icon-4.png" alt="">
+                 </span>
+               </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 热门目的地 -->
+    <div class="mt-3 bg-gray pt-3">
+      <div class="container p-0">
+        <h3>热门目的地</h3>
+        <!-- 两侧推荐目的地 -->
+        <div class="row mt-4">
+          <!-- 左侧境内推荐 -->
+          <div class="col-md-6 col-12">
+            <h4 class="text-danger">境内推荐目的地</h4>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">海南</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">海口</a></li>
+                <li class="mr-2"><a href="#">三亚</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">云南</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">丽江</a></li>
+                <li class="mr-2"><a href="#">昆明</a></li>
+                <li class="mr-2"><a href="#">香格里拉</a></li>
+                <li class="mr-2"><a href="#">大理</a></li>
+                <li class="mr-2"><a href="#">泸沽湖</a></li>
+                <li class="mr-2"><a href="#">腾冲</a></li>
+                <li class="mr-2"><a href="#">双廊</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">福建</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">厦门</a></li>
+                <li class="mr-2"><a href="#">鼓浪屿</a></li>
+                <li class="mr-2"><a href="#">厦门大学</a></li>
+                <li class="mr-2"><a href="#">日光岩</a></li>
+                <li class="mr-2"><a href="#">菽庄花园</a></li>
+                <li class="mr-2"><a href="#">福州</a></li>
+                <li class="mr-2"><a href="#">曾厝垵</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">川渝</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">九寨沟</a></li>
+                <li class="mr-2"><a href="#">成都</a></li>
+                <li class="mr-2"><a href="#">杜甫草堂</a></li>
+                <li class="mr-2"><a href="#">武侯祠</a></li>
+                <li class="mr-2"><a href="#">春熙路</a></li>
+                <li class="mr-2"><a href="#">锦里</a></li>
+                <li class="mr-2"><a href="#">峨眉山</a></li>
+                <li class="mr-2"><a href="#">都江堰</a></li>
+                <li class="mr-2"><a href="#">稻城</a></li>
+                <li class="mr-2"><a href="#">亚丁</a></li>
+                <li class="mr-2"><a href="#">康定</a></li>
+                <li class="mr-2"><a href="#">重庆</a></li>
+                <li class="mr-2"><a href="#">磁器口</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">广西贵州</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">桂林</a></li>
+                <li class="mr-2"><a href="#">南宁</a></li>
+                <li class="mr-2"><a href="#">珠海</a></li>
+                <li class="mr-2"><a href="#">贵阳</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">京津冀</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">北京</a></li>
+                <li class="mr-2"><a href="#">故宫</a></li>
+                <li class="mr-2"><a href="#">天安门</a></li>
+                <li class="mr-2"><a href="#">天坛</a></li>
+                <li class="mr-2"><a href="#">王府井大街</a></li>
+                <li class="mr-2"><a href="#">圆明园</a></li>
+                <li class="mr-2"><a href="#">恭王府</a></li>
+                <li class="mr-2"><a href="#">天津</a></li>
+                <li class="mr-2"><a href="#">颐和园</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">东北</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">大连</a></li>
+                <li class="mr-2"><a href="#">哈尔滨</a></li>
+                <li class="mr-2"><a href="#">长春</a></li>
+                <li class="mr-2"><a href="#">沈阳</a></li>
+                <li class="mr-2"><a href="#">海拉尔</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">华北</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">青岛</a></li>
+                <li class="mr-2"><a href="#">八大关</a></li>
+                <li class="mr-2"><a href="#">烟台</a></li>
+                <li class="mr-2"><a href="#">济南</a></li>
+                <li class="mr-2"><a href="#">泰山</a></li>
+                <li class="mr-2"><a href="#">太原</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">华东</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">杭州</a></li>
+                <li class="mr-2"><a href="#">西湖</a></li>
+                <li class="mr-2"><a href="#">灵隐寺</a></li>
+                <li class="mr-2"><a href="#">上海</a></li>
+                <li class="mr-2"><a href="#">东方明珠</a></li>
+                <li class="mr-2"><a href="#">外滩</a></li>
+                <li class="mr-2"><a href="#">田子坊</a></li>
+                <li class="mr-2"><a href="#">杜莎夫人蜡像馆</a></li>
+                <li class="mr-2"><a href="#">苏州</a></li>
+                <li class="mr-2"><a href="#">拙政园</a></li>
+                <li class="mr-2"><a href="#">虎丘</a></li>
+                <li class="mr-2"><a href="#">乌镇</a></li>
+                <li class="mr-2"><a href="#">扬州</a></li>
+                <li class="mr-2"><a href="#">无锡</a></li>
+                <li class="mr-2"><a href="#">宁波</a></li>
+                <li class="mr-2"><a href="#">南京</a></li>
+                <li class="mr-2"><a href="#">夫子庙</a></li>
+                <li class="mr-2"><a href="#">中山陵</a></li>
+                <li class="mr-2"><a href="#">南京总统府</a></li>
+                <li class="mr-2"><a href="#">玄武湖</a></li>
+                <li class="mr-2"><a href="#">明孝陵</a></li>
+                <li class="mr-2"><a href="#">黄山</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">中部</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">西安</a></li>
+                <li class="mr-2"><a href="#">兵马俑</a></li>
+                <li class="mr-2"><a href="#">钟鼓楼</a></li>
+                <li class="mr-2"><a href="#">大雁塔</a></li>
+                <li class="mr-2"><a href="#">华清池</a></li>
+                <li class="mr-2"><a href="#">大唐芙蓉园</a></li>
+                <li class="mr-2"><a href="#">洛阳</a></li>
+                <li class="mr-2"><a href="#">张家界</a></li>
+                <li class="mr-2"><a href="#">凤凰</a></li>
+                <li class="mr-2"><a href="#">长沙</a></li>
+                <li class="mr-2"><a href="#">武汉</a></li>
+                <li class="mr-2"><a href="#">婺源</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">西北</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">敦煌</a></li>
+                <li class="mr-2"><a href="#">嘉峪关</a></li>
+                <li class="mr-2"><a href="#">张掖</a></li>
+                <li class="mr-2"><a href="#">兰州</a></li>
+                <li class="mr-2"><a href="#">西宁</a></li>
+                <li class="mr-2"><a href="#">青海湖</a></li>
+                <li class="mr-2"><a href="#">银川</a></li>
+                <li class="mr-2"><a href="#">乌鲁木齐</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">西藏</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">拉萨</a></li>
+                <li class="mr-2"><a href="#">布达拉宫</a></li>
+                <li class="mr-2"><a href="#">纳木错</a></li>
+                <li class="mr-2"><a href="#">大昭寺</a></li>
+                <li class="mr-2"><a href="#">林芝</a></li>
+                <li class="mr-2"><a href="#">日喀则</a></li>
+                <li class="mr-2"><a href="#">波密</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 右侧出境推荐 -->
+          <div class="col-md-6 col-12">
+            <h4 class="text-danger">出境推荐目的地</h4>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">港澳台</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">香港</a></li>
+                <li class="mr-2"><a href="#">星光大道</a></li>
+                <li class="mr-2"><a href="#">海洋公园</a></li>
+                <li class="mr-2"><a href="#">铜锣湾</a></li>
+                <li class="mr-2"><a href="#">澳门</a></li>
+                <li class="mr-2"><a href="#">威尼斯人</a></li>
+                <li class="mr-2"><a href="#">玫瑰圣母堂</a></li>
+                <li class="mr-2"><a href="#">台湾</a></li>
+                <li class="mr-2"><a href="#">台北</a></li>
+                <li class="mr-2"><a href="#">台北101</a></li>
+                <li class="mr-2"><a href="#">西门町</a></li>
+                <li class="mr-2"><a href="#">台北总统府</a></li>
+                <li class="mr-2"><a href="#">台北故宫博物院</a></li>
+                <li class="mr-2"><a href="#">士林夜市</a></li>
+                <li class="mr-2"><a href="#">高雄</a></li>
+                <li class="mr-2"><a href="#">台中</a></li>
+                <li class="mr-2"><a href="#">九份</a></li>
+                <li class="mr-2"><a href="#">花莲</a></li>
+                <li class="mr-2"><a href="#">阿里山</a></li>
+                <li class="mr-2"><a href="#">垦丁</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">日韩</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">日本</a></li>
+                <li class="mr-2"><a href="#">东京</a></li>
+                <li class="mr-2"><a href="#">大阪</a></li>
+                <li class="mr-2"><a href="#">京都</a></li>
+                <li class="mr-2"><a href="#">银座</a></li>
+                <li class="mr-2"><a href="#">浅草寺</a></li>
+                <li class="mr-2"><a href="#">东京塔</a></li>
+                <li class="mr-2"><a href="#">韩国</a></li>
+                <li class="mr-2"><a href="#">首尔</a></li>
+                <li class="mr-2"><a href="#">景福宫</a></li>
+                <li class="mr-2"><a href="#">首尔塔</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">东南亚</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">新加坡</a></li>
+                <li class="mr-2"><a href="#">马来西亚</a></li>
+                <li class="mr-2"><a href="#">吉隆坡</a></li>
+                <li class="mr-2"><a href="#">马六甲</a></li>
+                <li class="mr-2"><a href="#">沙巴</a></li>
+                <li class="mr-2"><a href="#">泰国</a></li>
+                <li class="mr-2"><a href="#">曼谷</a></li>
+                <li class="mr-2"><a href="#">大皇宫</a></li>
+                <li class="mr-2"><a href="#">郑王庙</a></li>
+                <li class="mr-2"><a href="#">普吉岛</a></li>
+                <li class="mr-2"><a href="#">清迈</a></li>
+                <li class="mr-2"><a href="#">苏梅岛</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">南亚及中南半岛</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">马尔代夫</a></li>
+                <li class="mr-2"><a href="#">越南</a></li>
+                <li class="mr-2"><a href="#">河内</a></li>
+                <li class="mr-2"><a href="#">美奈</a></li>
+                <li class="mr-2"><a href="#">芽庄</a></li>
+                <li class="mr-2"><a href="#">胡志明市</a></li>
+                <li class="mr-2"><a href="#">柬埔寨</a></li>
+                <li class="mr-2"><a href="#">暹粒</a></li>
+                <li class="mr-2"><a href="#">吴哥窟</a></li>
+                <li class="mr-2"><a href="#">金边</a></li>
+                <li class="mr-2"><a href="#">印度</a></li>
+                <li class="mr-2"><a href="#">新德里</a></li>
+                <li class="mr-2"><a href="#">尼泊尔</a></li>
+                <li class="mr-2"><a href="#">加德满都</a></li>
+                <li class="mr-2"><a href="#">博克拉</a></li>
+                <li class="mr-2"><a href="#">科伦坡</a></li>
+                <li class="mr-2"><a href="#">斯里兰卡</a></li>
+                <li class="mr-2"><a href="#">老挝</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">欧洲</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">伦敦</a></li>
+                <li class="mr-2"><a href="#">西敏寺</a></li>
+                <li class="mr-2"><a href="#">白金汉宫</a></li>
+                <li class="mr-2"><a href="#">大英博物馆</a></li>
+                <li class="mr-2"><a href="#">大笨钟</a></li>
+                <li class="mr-2"><a href="#">伦敦眼</a></li>
+                <li class="mr-2"><a href="#">伦敦塔桥</a></li>
+                <li class="mr-2"><a href="#">布拉格</a></li>
+                <li class="mr-2"><a href="#">巴黎</a></li>
+                <li class="mr-2"><a href="#">巴黎圣母院</a></li>
+                <li class="mr-2"><a href="#">卢浮宫</a></li>
+                <li class="mr-2"><a href="#">协和广场</a></li>
+                <li class="mr-2"><a href="#">凯旋门</a></li>
+                <li class="mr-2"><a href="#">巴士底广场</a></li>
+                <li class="mr-2"><a href="#">埃菲尔铁塔</a></li>
+                <li class="mr-2"><a href="#">里昂</a></li>
+                <li class="mr-2"><a href="#">马赛</a></li>
+                <li class="mr-2"><a href="#">意大利</a></li>
+                <li class="mr-2"><a href="#">罗马</a></li>
+                <li class="mr-2"><a href="#">许愿池</a></li>
+                <li class="mr-2"><a href="#">米兰</a></li>
+                <li class="mr-2"><a href="#">米兰大教堂</a></li>
+                <li class="mr-2"><a href="#">佛罗伦萨</a></li>
+                <li class="mr-2"><a href="#">威尼斯</a></li>
+                <li class="mr-2"><a href="#">瑞士</a></li>
+                <li class="mr-2"><a href="#">苏黎世</a></li>
+                <li class="mr-2"><a href="#">少女峰</a></li>
+                <li class="mr-2"><a href="#">日内瓦</a></li>
+                <li class="mr-2"><a href="#">德国</a></li>
+                <li class="mr-2"><a href="#">慕尼黑</a></li>
+                <li class="mr-2"><a href="#">法兰克福</a></li>
+                <li class="mr-2"><a href="#">科隆</a></li>
+                <li class="mr-2"><a href="#">汉堡</a></li>
+                <li class="mr-2"><a href="#">希腊</a></li>
+                <li class="mr-2"><a href="#">维也纳</a></li>
+                <li class="mr-2"><a href="#">马德里</a></li>
+                <li class="mr-2"><a href="#">巴塞罗那</a></li>
+                <li class="mr-2"><a href="#">里斯本</a></li>
+                <li class="mr-2"><a href="#">阿姆斯特丹</a></li>
+                <li class="mr-2"><a href="#">卢森堡</a></li>
+                <li class="mr-2"><a href="#">梵蒂冈</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">大洋洲</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">澳大利亚</a></li>
+                <li class="mr-2"><a href="#">悉尼</a></li>
+                <li class="mr-2"><a href="#">墨尔本</a></li>
+                <li class="mr-2"><a href="#">黄金海岸</a></li>
+                <li class="mr-2"><a href="#">奥克兰</a></li>
+                <li class="mr-2"><a href="#">基督城</a></li>
+                <li class="mr-2"><a href="#">皇后镇</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">中东非洲</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">迪拜</a></li>
+              </ul>
+            </div>
+            <div class="row">
+              <h6 class="col-2 mySmallFont">美洲</h6>
+              <ul class="col-10 list-unstyled d-flex flex-wrap mySmallFont">
+                <li class="mr-2"><a href="#">多伦多</a></li>
+                <li class="mr-2"><a href="#">温哥华</a></li>
+                <li class="mr-2"><a href="#">美国</a></li>
+                <li class="mr-2"><a href="#">纽约</a></li>
+                <li class="mr-2"><a href="#">华尔街</a></li>
+                <li class="mr-2"><a href="#">洛杉矶</a></li>
+                <li class="mr-2"><a href="#">好莱坞</a></li>
+                <li class="mr-2"><a href="#">星光大道</a></li>
+                <li class="mr-2"><a href="#">圣莫尼卡</a></li>
+                <li class="mr-2"><a href="#">旧金山</a></li>
+                <li class="mr-2"><a href="#">金门大桥</a></li>
+                <li class="mr-2"><a href="#">九曲花街</a></li>
+                <li class="mr-2"><a href="#">费城</a></li>
+                <li class="mr-2"><a href="#">波士顿</a></li>
+                <li class="mr-2"><a href="#">芝加哥</a></li>
+                <li class="mr-2"><a href="#">拉斯维加斯</a></li>
+                <li class="mr-2"><a href="#">第五大道</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="pt-5">
+      <div class="container d-flex justify-content-between p-0">
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">旅游问答</a></li>
+          <li><a href="#">十六番</a></li>
+          <li><a href="#">机票</a></li>
+          <li><a href="#">世界邦自由行</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">poco旅游</a></li>
+          <li><a href="#">旅游签证</a></li>
+          <li><a href="#">长岛旅游攻略</a></li>
+          <li><a href="#">石榴微电影网</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">奇艺旅游</a></li>
+          <li><a href="#">旅游景点</a></li>
+          <li><a href="#">旅游攻略</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">火车时刻表</a></li>
+          <li><a href="#">途风网</a></li>
+          <li><a href="#">昆明旅行社</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">百酷特色住宿</a></li>
+          <li><a href="#">特价酒店</a></li>
+          <li><a href="#">四川成都旅行社</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">517旅行</a></li>
+          <li><a href="#">沈阳旅行社</a></li>
+          <li><a href="#">国际机票</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">旅游论坛</a></li>
+          <li><a href="#">51YOU旅游网</a></li>
+          <li><a href="#">旅游资讯</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">环视旅游网</a></li>
+          <li><a href="#">武隆旅游</a></li>
+          <li><a href="#">放心游商城</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">短租房</a></li>
+          <li><a href="#">动车</a></li>
+          <li><a href="#">出境特价机票</a></li>
+        </ul>
+      </div>
+      <div class="container d-flex justify-content-between mySmallFont p-0">
+        <ul class="d-flex list-unstyled">
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">意见反馈</a></li>
+          <li><a href="#">联系我们</a></li>
+          <li><a href="#">帮助</a></li>
+          <li><a href="#">加入我们</a></li>
+          <li><a href="#">网站地图</a></li>
+          <li><a href="#">旅馆</a></li>
+          <li><a href="#">App下载</a></li>
+          <li><a href="#">旅游资讯</a></li>
+          <li><a href="#">|</a></li>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#"><img src="img/sina.png" alt="">新浪微博</a></li>
+          <li><a href="#"><img src="img/wechat.png" alt="">微信</a></li>
+        </ul>
+        <p>®2008-2019 背包兔</p>
+      </div>
+    </footer>
+  </body>
+</html>

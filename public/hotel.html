@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="img/wen-ico.png" type="img/x-ico" />
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/hotel.css" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <title>酒店 - 背包兔做行程更简单</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="bg-primary">
+    <div class="container navbar navbar-expand-lg navbar-dark  p-0 d-flex">
+      <!-- logo图 -->
+      <a href="index.html" class="p-0"><img src="img/logo.png" alt="" class="img-fluid"></a>
+      <!-- 折叠按钮 -->
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#content">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- 导航详情部分 -->
+      <div class="collapse navbar-collapse justify-content-between " id="content">
+        <!-- 导航按钮 -->
+        <ul class="navbar-nav justify-content-between">
+          <li class="nav-item text-center">
+            <a href="index.html" class="nav-link">首页</a>
+          </li>
+          <li class="nav-item text-center">
+            <a href="#" class="nav-link">行程</a>
+          </li>
+          <li class="nav-item text-center">
+            <a href="#" class="nav-link">目的地</a>
+          </li>
+          <!-- 带下拉菜单项目 -->
+          <li class="nav-item text-center dropdown">
+            <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown">酒店</a>
+            <ul class="dropdown-menu bg-primary">
+              <li class="dropdown-item"><a class="text-white" href="hotel.html">酒店预定</a></li>
+              <li class="dropdown-item"><a class="text-white" href="#">酒店攻略</a></li>
+            </ul>
+          </li>
+          <li class="nav-item text-center dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">特价</a>
+            <ul class="dropdown-menu  bg-primary">
+              <li class="dropdown-item"><a class="text-white" href="#">特价酒店</a></li>
+              <li class="dropdown-item"><a class="text-white" href="#">特价线路</a></li>
+              <li class="dropdown-item"><a class="text-white" href="#">保险</a></li>
+            </ul>
+          </li>
+          <li class="nav-item text-center">
+            <a href="#" class="nav-link">帮助</a>
+          </li>
+        </ul>
+        <!-- 搜索框 -->
+        <div class="d-flex align-content-center text-center justify-content-center">
+          <div class="d-flex align-items-center ">
+            <input type="text" placeholder="搜索行程、目的地">
+            <a href="#"><img src="img/search-black.png" alt=""></a>
+          </div>
+        </div>
+        <!-- 创建行程及注册登录 -->
+        <div class="d-flex flex-nowrap text-white align-items-center justify-content-center p-2">
+          <div class="bg-warning mr-lg-5 mr-2 p-1">+创建行程</div>
+          <div><a href="#login" class="text-white" data-toggle="modal">登录</a>|<a href="reg.html" class="text-white">注册</a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- 返回顶部 -->
+  <div class="bg-success d-flex align-items-center justify-content-center">
+    <a href="#"><img src="img/go_to_top.png" alt=""></a>
+  </div>
+  <!-- 登录模态 -->
+  <div class="modal p-0" id="login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          登录
+          <button data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <p>用户名称<input type="text" name="uname" id="uname" class="form-control"></p>
+          <p>用户密码<input type="password" name="upwd" id="upwd" class="form-control"></p>
+          <p><input type="button" value="登录" class="btn btn-primary mr-3"><input type="button" value="取消" class="btn btn-primary"
+              data-dismiss="modal"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section>
+    <img src="img/hotel/01.png" alt="" class="img-fluid">
+  </section>
+  <!-- 底部部分 -->
+  <footer class="pt-5">
+      <div class="container d-flex justify-content-between p-0">
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">旅游问答</a></li>
+          <li><a href="#">十六番</a></li>
+          <li><a href="#">机票</a></li>
+          <li><a href="#">世界邦自由行</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">poco旅游</a></li>
+          <li><a href="#">旅游签证</a></li>
+          <li><a href="#">长岛旅游攻略</a></li>
+          <li><a href="#">石榴微电影网</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">奇艺旅游</a></li>
+          <li><a href="#">旅游景点</a></li>
+          <li><a href="#">旅游攻略</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">火车时刻表</a></li>
+          <li><a href="#">途风网</a></li>
+          <li><a href="#">昆明旅行社</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">百酷特色住宿</a></li>
+          <li><a href="#">特价酒店</a></li>
+          <li><a href="#">四川成都旅行社</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">517旅行</a></li>
+          <li><a href="#">沈阳旅行社</a></li>
+          <li><a href="#">国际机票</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">旅游论坛</a></li>
+          <li><a href="#">51YOU旅游网</a></li>
+          <li><a href="#">旅游资讯</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">环视旅游网</a></li>
+          <li><a href="#">武隆旅游</a></li>
+          <li><a href="#">放心游商城</a></li>
+        </ul>
+        <ul class="list-unstyled mySmallFont">
+          <li><a href="#">短租房</a></li>
+          <li><a href="#">动车</a></li>
+          <li><a href="#">出境特价机票</a></li>
+        </ul>
+      </div>
+      <div class="container d-flex justify-content-between mySmallFont p-0">
+        <ul class="d-flex list-unstyled">
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">意见反馈</a></li>
+          <li><a href="#">联系我们</a></li>
+          <li><a href="#">帮助</a></li>
+          <li><a href="#">加入我们</a></li>
+          <li><a href="#">网站地图</a></li>
+          <li><a href="#">旅馆</a></li>
+          <li><a href="#">App下载</a></li>
+          <li><a href="#">旅游资讯</a></li>
+          <li><a href="#">|</a></li>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#"><img src="img/sina.png" alt="">新浪微博</a></li>
+          <li><a href="#"><img src="img/wechat.png" alt="">微信</a></li>
+        </ul>
+        <p>®2008-2019 背包兔</p>
+      </div>
+  </footer>
+</body>
+
+</html>

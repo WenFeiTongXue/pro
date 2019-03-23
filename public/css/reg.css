@@ -1,0 +1,22 @@
+section{
+  margin-top:-40px;
+  position: relative;
+}
+section>img{
+  min-height: 700px;
+}
+#regForm{
+  font-size:.9rem;
+  width: 18%;
+  position: absolute;
+  top:20%;
+  right:30%;
+  /* padding:10px; */
+  background:rgba(255,255,255,.7)
+}
+#regForm a{
+  color:#09f;
+}
+#regForm input{
+  font-size:.9rem;
+}

@@ -1,0 +1,25 @@
+try{document.open();}catch(e){;}
+var live800_companyID="186226";
+var live800_protocol="http:";
+var live800_isMobile="0";
+var jsessionId = ";jsessionid=043905686CF1F71C3B9C7B1ACB2050F8";
+try{
+if(navigator.cookieEnabled && navigator.platform !== "iPhone" && navigator.platform !== "iPad"){jsessionId = "";}
+}catch(e){}
+var enterurl = null;
+enterurl="http%3A%2F%2Fwww.beibaotu.com%2F";
+var isOldSkin=false;
+var server_prefix_list=['http://chat56.live800.com/live800'];
+var isNeedCheckDomainBinding=false;
+var globalWindowAttribute='toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=920,height=620';
+live800_chatVersion="5";
+jid="1641362346";
+var live800_baseUrl="chat56.live800.com";
+var live800_baseHtmlUrl="chat56.live800.com";
+var live800_baseWebApp="/live800";
+var live800_baseChatHtmlDir="/chatClient";
+live800_Language="zh";
+live800_configID="73847";
+live800_codeType="custom";
+live800_configContent="live800_text=%25u610f%25u89c1%25u53cd%25u9988&live800_switch=0";
+document.write("<scr"+"ipt language=\"javascript\" src=\"http://chat56.live800.com/live800/chatClient/textStatic.js\"></scr"+"ipt>");
